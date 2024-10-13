@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فاکتور (demo)</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="factor-detail">
+                <p>تاریخ:....................</p>
+                <p>شماره:....................</p>
+            </div>
+            <div id="factor-title">
+                <h1>شرکت تکمیل بافت</h1>
+                <h3>قبض خروج کالای امانی</h3>
+            </div>
+        </div>
+        <div id="table">
+            <table id="factor">
+            </table>
+        </div>
+        <div id="footer">
+            <p>امضا تحویل گیرنده</p>
+            <p>امضا نگهبانی</p>
+        </div>
+    </div>
+    <div id="edit-table">
+        <table id="edit-factor">
+
+        </table>
+        <button onclick="closeEdit()">خروج</button>
+        <button>چاپ</button>
+        <button onclick="saveEdit()">ذخیره</button>
+    </div>
+    <div>
+        <button onclick="editFactor()">ویرایش</button>
+        <button>ذخیره</button>
+    </div>
+</body>
+
+</html>
