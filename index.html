@@ -10,37 +10,27 @@
 </head>
 
 <body>
+    <div id="product-detial-selection">
+    </div>
     <div id="main">
-        <div id="header">
-            <div id="factor-detail">
-                <p>تاریخ:....................</p>
-                <p>شماره:....................</p>
-            </div>
-            <div id="factor-title">
-                <h1>شرکت تکمیل بافت</h1>
-                <h3>قبض خروج کالای امانی</h3>
-            </div>
-        </div>
-        <div id="table">
-            <table id="factor">
-            </table>
-        </div>
-        <div id="footer">
-            <p>امضا تحویل گیرنده</p>
-            <p>امضا نگهبانی</p>
-        </div>
     </div>
-    <div id="edit-table">
-        <table id="edit-factor">
-
-        </table>
-        <button onclick="closeEdit()">خروج</button>
-        <button>چاپ</button>
-        <button onclick="saveEdit()">ذخیره</button>
-    </div>
-    <div>
+    <div id="factor-type">
+        <input type="radio" name="factor-type-btn" id="enter" value="enter">
+        <label for="enter">قبض ورود</label>
+        <input type="radio" name="factor-type-btn" id="exit" value="exit" onchange="exitFactor()">
+        <label for="exit">قبض خروج</label>
+        <br>
+        <label for="paper">اندازه برگه را انتخاب کنید:</label>
+        <select name="paper" id="paper">
+            <option value="A5">A5</option>
+            <option value="B5">B5</option>
+            <option value="C5">C5</option>
+        </select>
+        <br>
         <button onclick="editFactor()">ویرایش</button>
-        <button>ذخیره</button>
+        <button onclick="closeEdit()">خروج</button>
+        <button onclick="saveEdit()">ذخیره</button>
+        <button onclick="print()">چاپ</button>
     </div>
 </body>
 
