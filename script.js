@@ -31,8 +31,12 @@ function exitFactor() {
 
         let customerSection = document.createElement("div");
         customerSection.id = "customer";
-        let customerNameItem = document.createElement("p");
-        customerNameItem.innerText = "نام مشتری:";
+        let customerNameItem = document.createElement("input");
+        customerNameItem.placeholder = "نام مشتری";
+        customerNameItem.id = "customer-name";
+        customerNameItem.type = "text";
+        // let customerNameItem = document.createElement("p");
+        // customerNameItem.innerText = "نام مشتری:";
 
         let tableSction = document.createElement("div");
         tableSction.id = "table";
@@ -52,11 +56,13 @@ function exitFactor() {
         factorDetailSection.appendChild(dateItem);
         factorDetailSection.appendChild(numberItem);
         factorTitleSection.appendChild(factorTitleItem);
+        factorSecTitleItem.appendChild(customerNameItem);
         factorTitleSection.appendChild(factorSecTitleItem);
-        customerSection.appendChild(customerNameItem);
+        // factorTitleSection.appendChild(customerNameItem);
+        // customerSection.appendChild(customerNameItem);
         headerSection.appendChild(factorDetailSection);
         headerSection.appendChild(factorTitleSection);
-        headerSection.appendChild(customerSection);
+        // headerSection.appendChild(customerSection);
         tableSction.appendChild(factorTableSection);
         footerSection.appendChild(deliverySignature);
         footerSection.appendChild(guardingSignature);
@@ -151,6 +157,18 @@ function productList() {
     let thisItem = this;
 
     let productDetialSelection = document.getElementById("product-detial-selection");
+    productDetialSelection.innerHTML = "";
+
+    let coords = document.createElement("p");
+    let thisId = this.id;
+    thisId.split("-");
+    let mark = Number(thisId[9]);
+    mark--;
+    coords.innerText = `ردیف: ${mark}`;
+
+    console.log(coords);
+    console.log(thisId);
+    console.log(thisId[9]);
 
     let detailLable = document.createElement("lable");
     detailLable.setAttribute("for", "product-detial-selection");
@@ -185,6 +203,7 @@ function productList() {
     dataListProduct.appendChild(opt3);
     dataListProduct.appendChild(opt4);
 
+    productDetialSelection.appendChild(coords);
     productDetialSelection.appendChild(detailLable);
     productDetialSelection.appendChild(inputProductList);
     productDetialSelection.appendChild(dataListProduct);
