@@ -1,0 +1,118 @@
+@media print {
+    body {
+        background-color: white;
+        width: 100% !important;
+        height: 100% !important;
+        page-break-inside: avoid !important;
+        page-break-before: avoid !important;
+        page-break-after: avoid !important;
+        overflow: hidden !important;
+        transform-origin: top left !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #factor-type {
+        display: none !important;
+    }
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px white inset !important;
+        -webkit-text-fill-color: black !important;
+        background-color: white !important;
+    }
+
+    #main::before {
+        content: none !important;
+    }
+
+    #main::after {
+        content: none !important;
+    }
+
+    #factor-detail label,
+    #factor-detail p {
+        opacity: 0 !important;
+    }
+
+    #date-item{
+        margin-right: 0.5cm;
+    }
+
+    #footer {
+        display: none !important;
+    }
+
+    #factor-title h1 {
+        display: none !important;
+    }
+
+    #factor-title h3 {
+        display: none !important;
+    }
+
+    #customer-name {
+        margin-top: 2.5cm;
+        margin-right: 12cm;
+    }
+
+    #main {
+        width: 17.5cm !important;
+        height: 20.1cm !important;
+        margin: 0;
+    }
+
+    #header {
+        height: 3.3cm !important;
+    }
+
+    #footer {
+        height: 3.6cm !important;
+    }
+
+    #table {
+        width: 14.4cm !important;
+        height: 14.5cm !important;
+        margin: 0 1.7cm !important;
+    }
+
+    .tr-table,
+    .th-table,
+    .td-table {
+        height: 1.2cm !important;
+    }
+
+    .th-table:nth-child(1) {
+        width: 1.5cm !important;
+    }
+
+    .th-table:nth-child(2) {
+        width: 3.2cm !important;
+    }
+
+    .th-table:nth-child(3) {
+        width: 2.9cm !important;
+    }
+
+    .th-table:nth-child(4) {
+        width: 1.7cm !important;
+    }
+
+    .th-table:nth-child(5) {
+        width: 1.6cm !important;
+    }
+
+    .th-table:nth-child(6) {
+        width: 1.4cm !important;
+    }
+
+    .th-table:nth-child(7) {
+        width: 2.2cm !important;
+    }
+}
+
+@page {
+    size: 17.5cm 21.1cm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

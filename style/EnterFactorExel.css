@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "b nazanin";
+}
+
+input {
+    background: transparent;
+    border: none;
+}
+
+#main {
+    width: fit-content;
+    height: fit-content;
+    background-color: antiquewhite;
+}
+
+.factors-container {
+    width: 210mm !important;
+    height: 297mm !important;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.factor {
+    width: 176mm;
+    height: 204mm;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.header-section {
+    width: 146mm;
+    height: 45mm;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-section {
+    width: 146mm;
+    height: 32mm;
+    padding: 0;
+}
+
+.second-title {
+    width: 172px;
+    float: right;
+}
+
+.detail-section {
+    width: 32%;
+
+}
+
+.detail-section,
+.title-section {
+    padding: 5mm 0 0 0;
+    height: auto;
+}
+
+.detail-section label,
+.date-item {
+    margin-top: 14mm;
+}
+
+.detail-section p {
+    display: flex;
+    height: 50%;
+    align-items: flex-end;
+    margin: 3mm 0 3mm 0;
+    height: fit-content;
+    padding: 0;
+}
+
+.date-item {
+    margin: 0;
+    width: 90px;
+    padding: 0 1mm 0 0;
+}
+
+.title-section {
+    width: 68%;
+    align-items: flex-start;
+}
+
+.title-section h3 {
+    padding-right: 20px;
+}
+
+.title-section::after {
+    content: none;
+}
+
+.customer-data {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/* .customer-data::before {
+    content: "";
+}
+
+.customer-data::after {
+    content: "";
+} */
+
+.header-p {
+    width: max-content;
+}
+
+.customer-name-input {
+    width: 29mm;
+    text-align: center;
+}
+
+.factor-table {
+    width: 146mm;
+    height: 135mm;
+    font-size: 14px;
+}
+
+.customer {
+    width: 170px;
+    height: 30px;
+    font-size: 18px;
+    float: left;
+    margin: 0 0 0 30px;
+}
+
+.customer-name {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
+
+.table-row,
+.table-row-data {
+    height: 11mm;
+}
+
+.table-row-header {
+    font-size: 18px;
+    height: 15mm;
+}
+
+.table-row-data {
+    text-align: center;
+    overflow: hidden;
+}
+
+.inputs {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 1mm 1mm 0 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+.textArea {
+    display: block;
+    text-align: right;
+    height: 100%;
+    padding: 1mm 1mm 0 0;
+    line-height: 15px;
+    font-size: 16px;
+    text-align-last: right;
+}
+
+.factor-table,
+.table-row,
+.table-row-data,
+.table-row-header {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.th-0:nth-child(1) {
+    width: 15mm;
+}
+
+.th-1:nth-child(2) {
+    width: 31mm;
+}
+
+.th-2:nth-child(3) {
+    width: 29mm;
+}
+
+.th-3:nth-child(4) {
+    width: 16mm;
+}
+
+.th-4:nth-child(5) {
+    width: 16mm;
+}
+
+.th-5:nth-child(6) {
+    width: 15mm;
+}
+
+.th-6:nth-child(7) {
+    width: 22mm;
+}
+
+.footer {
+    width: 146mm !important;
+    height: 25mm !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media print {
+    body {
+        background-color: white !important;
+        width: 100% !important;
+        height: 100% !important;
+        page-break-inside: avoid !important;
+        page-break-before: avoid !important;
+        page-break-after: avoid !important;
+        overflow: hidden !important;
+        transform-origin: top left !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px white inset !important;
+        -webkit-text-fill-color: black !important;
+        background-color: white !important;
+    }
+
+    #main {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    #main::before {
+        content: none !important;
+    }
+
+    #main::after {
+        content: none !important;
+    }
+
+    .factors-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* .factors-container,
+    .factor,
+    .factor-table,
+    .table-row,
+    .table-row-data,
+    .table-row-header {
+        border: 1px solid black !important;
+    } */
+
+    #main,
+    .factors-container,
+    .factor,
+    .factor-table,
+    .table-row,
+    .table-row-data,
+    .table-row-header {
+        border: 1px solid white !important;
+    }
+
+    .detail-section label,
+    .detail-section p,
+    .first-title,
+    .second-title,
+    .header-p,
+    .table-row-header,
+    .footer {
+        opacity: 0 !important;
+    }
+}
+
+@page {
+    size: A4 !important;
+    transform-origin: top right !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    outline: none !important;
+}

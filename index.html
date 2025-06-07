@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+
+    <title>چاپ فاکتور ورود/خروج</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+    <script type="text/javascript"
+        src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/exit-factor-creator.js"></script>
+    <script src="js/enter-factor-creator.js"></script>
+    <script src="js/importExel.js" defer></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+    <script>
+        window.onload = function () {
+            document.getElementById('import-exel-input').addEventListener('change', importExel);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="main">
+    </div>
+    <div id="factor-type">
+        <input type="radio" name="factor-type-btn" id="enter" value="enter" onchange="enterFactorChecked()">
+        <label for="enter">قبض ورود</label>
+
+        <input type="radio" name="factor-type-btn" id="exit" value="exit" onchange="exitFactorChecked()">
+        <label for="exit">قبض خروج</label>
+
+        <br>
+
+        <button onclick="editFactor()" class="span-botton">ویرایش</button>
+        <button onclick="saveEdit()" class="span-botton">ذخیره</button>
+        <button onclick="newFactor()" class="span-botton">جدید</button>
+
+        <hr>
+
+        <label for="product-types-input" class="suggestion deactive-suggest">نوع کالا را انتخاب کنید:</label>
+        <br>
+        <input type="text" list="product-types" value="" id="product-types-input" class="suggestion deactive-suggest">
+        <br>
+
+        <button onclick="submitSuggest()" class="suggestion deactive-suggest">اعمال</button>
+        <button onclick="saveOption()" id="add-option" class="suggestion deactive-suggest">ذخیره گزینه</button>
+
+        <hr>
+
+        <label for="import-exel">وارد کردن فایل اکسل:</label>
+        <br>
+        <input type="file" name="import-exel" id="import-exel-input" accept="xlsx">
+        <br>
+        <button onclick="printInputExel()">پرینت</button>
+
+        <datalist id="product-types">
+        </datalist>
+
+    </div>
+</body>
+
+</html>
