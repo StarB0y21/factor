@@ -8,6 +8,8 @@ let suggestionValue;
 var enterFactorCondition = 0;
 var exitFactorCondition = 0;
 
+// var paddingValue;
+
 document.getElementById("main").style.pointerEvents = "none";
 
 function editFactor() {
@@ -15,7 +17,22 @@ function editFactor() {
 }
 
 function saveEdit() {
+    // let theFactor = document.getElementById("factor-container");
+    
+    // if (enterFactorCondition || exitFactorCondition) {
+    //     if (theFactor) {
+    //         theFactor.style.paddingTop = `${paddingValue}mm`;
+    //         theFactor.style.backgroundColor = "red";
+    //     } else {
+    //         console.log("something is fucking wrong!");
+    //     }
+    // } else {
+    //     console.log("lose");
+    // }
+
     print();
+    // theFactor.style.paddingTop = "";
+    // theFactor.style.backgroundColor = "blue";
 }
 
 function enterFactorChecked() {
@@ -48,6 +65,11 @@ function newFactor() {
         window.alert("لطفا یک نوع فاکتور انتخاب کنید");
     }
 }
+
+// function paddingTop(paddingInput) {
+//     paddingValue = paddingInput.value;
+//     console.log(paddingValue);
+// }
 
 function SuggestionActive(thisItem) {
     let suggestItems = document.getElementsByClassName("suggestion");
@@ -90,6 +112,9 @@ function wipePage() {
     let excelExitStyle = document.getElementById("excel-exit-factor-style");
     let excelEnterStyle = document.getElementById("excel-enter-factor-style");
 
+    // paddingValue = 0;
+    // document.getElementById("padding-top-factor").value = 0;
+
     if (enterStyle != null) {
         saveEdit();
         enterFactorCondition = 0;
@@ -110,7 +135,10 @@ function wipePage() {
         enterFactorCondition = 0;
         document.getElementById("enter").checked = false;
         excelEnterStyle.remove();
-    }
+    } 
+    // else {
+    //     console.log("wtf?")
+    // }
     document.getElementById("main").innerHTML = "";
 }
 

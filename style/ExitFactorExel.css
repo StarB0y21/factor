@@ -12,12 +12,11 @@ input {
 #main {
     width: fit-content;
     height: fit-content;
-    background-color: antiquewhite;
 }
 
 .factors-container {
     width: 210mm !important;
-    height: 297mm !important;
+    height: 296mm !important;
     border: 1px solid black;
     margin-bottom: 10px;
     background-color: white;
@@ -25,6 +24,21 @@ input {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+
+    background: rgba(202, 242, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(202, 242, 255, 0.3);
+}
+
+.factors-container:nth-child(odd) {
+    background-color: ghostwhite !important;
+}
+
+.factors-container:nth-child(even) {
+    background-color: lightskyblue !important;
 }
 
 .factor {
@@ -211,6 +225,13 @@ input {
         border: none !important;
         width: 100% !important;
         height: 100% !important;
+
+        background: transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: blur(0) !important;
+        -webkit-backdrop-filter: blur(0) !important;
+        border: none !important;
     }
 
     #main::before {
@@ -233,15 +254,6 @@ input {
         width: 100% !important;
         height: 100% !important;
     }
-
-    /* .factors-container,
-.factor,
-.factor-table,
-.table-row,
-.table-row-data,
-.table-row-header {
-    border: 1px solid black !important;
-} */
 
     #main,
     .factors-container,
